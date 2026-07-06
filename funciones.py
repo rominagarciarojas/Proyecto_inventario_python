@@ -51,7 +51,7 @@ def registrar_libro():
         print(Fore.RED + f"[ERROR] No se pudo registrar: {e}")
     finally:
         if conexion is not None:
-            conexion.close() # Cierre explícito de la conexión
+            conexion.close() 
 
 def visualizar_libros():
     print(Fore.BLUE + Style.BRIGHT + "\n--- Inventario de Librería Tolkien ---")
