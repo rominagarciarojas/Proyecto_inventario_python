@@ -1,0 +1,25 @@
+==================================================
+        CATÁLOGO OFICIAL DE LA LIBRERÍA           
+==================================================
+
+ID: 1
+Título: Socorro
+Autor: Elsa Bornemann
+Cantidad disponible: 23 unidades
+Precio: $23000.00
+Categoría/Género: Literatura infantil
+--------------------------------------------------
+ID: 2
+Título: Mi planta de naranja lima
+Autor: Mauro de Vasconcelos
+Cantidad disponible: 34 unidades
+Precio: $23000.00
+Categoría/Género: Novela infantil
+--------------------------------------------------
+ID: 3
+Título: El secreto de sus ojos
+Autor: Eduardo Sacheri
+Cantidad disponible: 12 unidades
+Precio: $34500.00
+Categoría/Género: Novela
+--------------------------------------------------

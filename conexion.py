@@ -1,27 +1,28 @@
 import sqlite3
 
 def crear_base_datos():
-    """
-    Crea la base de datos 'inventario.db' y la tabla 'productos' si no existen.
-    Define las columnas obligatorias: id, nombre, autor, cantidad, precio y categoria.
-    """
+    conexion = None
     try:
-        with sqlite3.connect('inventario.db') as conexion:
-            cursor = conexion.cursor()
-            cursor.execute('''
-                CREATE TABLE IF NOT EXISTS productos (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    nombre TEXT NOT NULL,
-                    autor TEXT,
-                    cantidad INTEGER NOT NULL,
-                    precio PESOS NOT NULL,
-                    categoria TEXT
-                )
-            ''')
-            conexion.commit()
+        conexion = sqlite3.connect('inventario.db')
+        cursor = conexion.cursor()
+        
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS productos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre TEXT NOT NULL,
+                autor TEXT,
+                cantidad INTEGER NOT NULL,
+                precio PESOS NOT NULL,
+                categoria TEXT
+            )
+        ''')
+        conexion.commit()
     except sqlite3.Error as e:
-        print(f"Error al inicializar la base de datos: {e}")
+        print(f"Error crítico al inicializar la base de datos: {e}")
+    finally:
+        if conexion is not None:
+            conexion.close()
 
 if __name__ == "__main__":
     crear_base_datos()
-    print("Base de datos y tabla inicializadas correctamente.")
+    print("Base de datos de la librería inicializada correctamente.")

@@ -9,7 +9,7 @@ def menu_principal():
     
     while True:
         print(Fore.CYAN + Style.BRIGHT + "\n==================================================")
-        print(Fore.WHITE + Style.BRIGHT + "     SISTEMA DE GESTIÓN DE LIBRERÍA TOLKIEN    ")
+        print(Fore.WHITE + Style.BRIGHT + "      SISTEMA DE GESTIÓN DE LIBRERÍA TOLKIEN        ")
         print(Fore.CYAN + Style.BRIGHT + "==================================================")
         print(Fore.WHITE + " 1. " + Fore.LIGHTYELLOW_EX + "Registrar nuevo libro")
         print(Fore.WHITE + " 2. " + Fore.LIGHTYELLOW_EX + "Visualizar todos los libros")
@@ -17,10 +17,11 @@ def menu_principal():
         print(Fore.WHITE + " 4. " + Fore.LIGHTYELLOW_EX + "Eliminar un libro (por ID)")
         print(Fore.WHITE + " 5. " + Fore.LIGHTYELLOW_EX + "Buscar un libro (ID / Título / Autor)")
         print(Fore.WHITE + " 6. " + Fore.LIGHTYELLOW_EX + "Reporte de libros con Bajo Stock")
-        print(Fore.WHITE + " 7. " + Fore.LIGHTRED_EX + "Salir del sistema")
+        print(Fore.WHITE + " 7. " + Fore.LIGHTYELLOW_EX + "Exportar catálogo completo a archivo TXT")
+        print(Fore.WHITE + " 8. " + Fore.LIGHTRED_EX + "Salir del sistema")
         print(Fore.CYAN + Style.BRIGHT + "==================================================")
         
-        opcion = input(Fore.WHITE + Style.BRIGHT + "Seleccione una opción (1-7): ").strip()
+        opcion = input(Fore.WHITE + Style.BRIGHT + "Seleccione una opción (1-8): ").strip()
         
         if opcion == "1":
             funciones.registrar_libro()
@@ -35,7 +36,9 @@ def menu_principal():
         elif opcion == "6":
             funciones.reporte_bajo_stock()
         elif opcion == "7":
-            print(Fore.GREEN + Style.BRIGHT + "\n¡Gracias por usar el sistema de la librería Tolkien! Gracias Talento Tech!!!")
+            funciones.exportar_catalogo_txt()
+        elif opcion == "8":
+            print(Fore.GREEN + Style.BRIGHT + "\n¡Gracias por usar el sistema de la librería! Gracias Talento Tech 💙🤍 .")
             break
         else:
             print(Fore.RED + Style.BRIGHT + "Opción no válida.")
